@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string animal;
+
+    cout << "Responda às perguntas com 'Sim' ou 'Não'." << endl;
+
+    cout << "É mamífero? ";
+    string mamifero;
+    cin >> mamifero;
+
+    cout << "É quadrúpede? ";
+    string quadrupede;
+    cin >> quadrupede;
+
+    cout << "É carnívoro? ";
+    string carnivoro;
+    cin >> carnivoro;
+
+    cout << "É herbívoro? ";
+    string herbivoro;
+    cin >> herbivoro;
+
+    if (mamifero == "Sim") {
+        if (quadrupede == "Sim") {
+            if (carnivoro == "Sim") {
+                animal = "leão";
+            } else if (herbivoro == "Sim") {
+                animal = "cavalo";
+            } else {
+                animal = "homem";
+            }
+        } else {
+            animal = "macaco";
+        }
+    } else {
+        if (quadrupede == "Sim") {
+            animal = "baleia";
+        } else {
+            if (carnivoro == "Sim") {
+                animal = "crocodilo";
+            } else {
+                animal = "cobra";
+            }
+        }
+    }
+
+    cout << "Então o animal escolhido foi o " << animal << "." << endl;
+
+    return 0;
+}
+
